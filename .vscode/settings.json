@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "，": true,
+    "．": true
+  },
+  "editor.wordWrap": "on"
+}
