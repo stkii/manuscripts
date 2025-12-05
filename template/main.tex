@@ -1,0 +1,51 @@
+% \documentclass[a4paper,twocolumn]{jsarticle}
+% \documentclass[a4paper]{jsreport}
+
+\usepackage[top=35mm,bottom=30mm,left=25mm,right=25mm]{geometry}
+
+\usepackage{amsmath}   % 数式
+\usepackage{amssymb}   % 数式記号
+\usepackage{bm}        % boldmath
+\usepackage{mathrsfs}  % 花文字など
+
+% \usepackage{multirow}  % 表のrow結合
+
+% sectionの書式設定
+\usepackage{titlesec}
+\titleformat{\section}
+  {\Large\bfseries}
+  {\thesection}{1em}{}
+  [{\titlerule\vspace{0.5em}}]
+
+% 章ごとの共通カウンタ
+\newcounter{defth}[chapter]
+\renewcommand{\thedefth}{\arabic{chapter}.\arabic{defth}}
+
+% definition環境
+\usepackage{xstring}
+\newenvironment{definition}[1]{
+  \refstepcounter{defth}
+  \par\addvspace{.5\baselineskip}
+  \textbf{%
+    \IfStrEqCase{#1}{
+      {def}{定義}
+      {th}{定理}
+      {prop}{命題}
+    }[]%
+    \thedefth
+  }%
+  \enspace
+}{
+  \par\addvspace{.5\baselineskip}
+}
+
+\title{TITLE}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\include{FILENAME}
+
+\end{document}
