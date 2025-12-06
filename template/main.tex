@@ -3,6 +3,8 @@
 
 \usepackage[top=35mm,bottom=30mm,left=25mm,right=25mm]{geometry}
 
+% \usepackage{appendix}
+
 \usepackage{amsmath}   % 数式
 \usepackage{amssymb}   % 数式記号
 \usepackage{bm}        % boldmath
@@ -47,5 +49,12 @@
 \maketitle
 
 \include{FILENAME}
+
+% \appendix
+
+% appendixに入ったらA.1のようにカウント
+% \renewcommand{\thedefth}{\Alph{chapter}.\arabic{defth}}
+
+% include{APPENDIX_FILENAME}
 
 \end{document}
