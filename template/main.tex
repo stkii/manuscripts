@@ -41,6 +41,12 @@
   \par\addvspace{.5\baselineskip}
 }
 
+% QED記号を右寄せで出力する
+\usepackage{amsthm}
+\renewcommand{\qedsymbol}{$\square$}
+\newcommand{\Qed}{\hfill\qedsymbol}       % テキスト
+\newcommand{\MathQed}{\tag*{\qedsymbol}}  % 数式環境
+
 \title{TITLE}
 \author{}
 \date{}
