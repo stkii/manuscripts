@@ -36,7 +36,7 @@
     }[]%
     \thedefth
   }%
-  \enspace
+  \hspace{0.28em}
 }{
   \par\addvspace{.5\baselineskip}
 }
@@ -46,6 +46,14 @@
 \renewcommand{\qedsymbol}{$\square$}
 \newcommand{\Qed}{\hfill\qedsymbol}       % テキスト
 \newcommand{\MathQed}{\tag*{\qedsymbol}}  % 数式環境
+
+% 証明環境
+\newenvironment{myproof}{%
+  \indent%
+  {\bf 証明}\hspace{0.67em}%
+}{%
+  \par
+}
 
 \title{TITLE}
 \author{}
