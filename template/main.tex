@@ -31,8 +31,11 @@
   \textbf{%
     \IfStrEqCase{#1}{
       {def}{定義}
+      {axi}{公理}
       {th}{定理}
       {prop}{命題}
+      {lem}{補題}
+      {coro}{系}
     }[]%
     \thedefth
   }%
@@ -49,10 +52,11 @@
 
 % 証明環境
 \newenvironment{myproof}{%
+  \par\addvspace{.5\baselineskip}
   \indent%
   {\bf 証明}\hspace{0.67em}%
 }{%
-  \par
+  \par\addvspace{.5\baselineskip}
 }
 
 \title{TITLE}
