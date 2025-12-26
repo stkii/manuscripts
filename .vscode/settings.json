@@ -1,8 +1,36 @@
 {
+  "[latex]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
   "editor.formatOnSave": true,
   "editor.unicodeHighlight.allowedCharacters": {
     "，": true,
     "．": true
   },
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "latex-workshop.formatting.latex": "none",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "uplatex → dvipdfmx",
+      "tools": ["uplatex", "dvipdfmx"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "uplatex",
+      "command": "uplatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": ["%DOCFILE%.dvi"]
+    }
+  ]
 }
